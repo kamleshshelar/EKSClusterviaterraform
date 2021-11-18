@@ -30,6 +30,7 @@ variable "availability_zones_public" {
     default = [ "us-east-2a" ]
 }
 
+
 variable "private_subnets_cidr" {
     description = "List of private subnets cidr"
     type = list
@@ -49,12 +50,4 @@ variable "cidr_block-nat_gw" {
 variable "cidr_block-internet_gw" {
     description = "Destination cidr of internet gateway"
     default = "0.0.0.0/0"
-}
-variable "fargate_namespace" {
-  description = "Name of fargate selector namespace"
-  default = "fargate-node"
-}
-variable "eks_node_group_instance_types" {
-  description  = "Instance type of node group"
-  default = "t2.micro"
 }
